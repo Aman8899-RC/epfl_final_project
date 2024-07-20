@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <!-- Results: {{ results }} -->
+    <table>
+        <thead>
+            <tr>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ price }}</td>
+                <td>{{ results.symbol }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

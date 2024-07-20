@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Sell
+{% endblock %}
+
+{% block main %}
+
+    <form class="m-3" action ="/sell" method="post" >
+        <!-- <select name="symbol">
+            {% for option in symobl_list %}
+                <ption name="{{option}}">{{ symobl_list.option }}</ption>
+            {% endfor %}
+        </select> -->
+        <input class = "form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text" autocomplete="off" style="margin-bottom:10px;">
+        <input class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min=1 autocomplete="off" style="margin-bottom:10px;">
+        <button type="submit" class="btn btn-primary" style="margin-bottom:10px;">Sell</button>
+    </form>
+{% endblock %}

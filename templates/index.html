@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+   
+    <div style="text-align:left; margin-top:60px; ">
+        <h3>Your Stocks</h3>
+        <hr style="dot 1px">
+    </div>
+    {% if share_info %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for share in share_info %}
+
+                <tr>
+                    <td class="symbol">{{ share.symbol }}</td>
+                    <td>{{ share.numbershares }}</td>
+                    <td>{{ share.currentsharesprice }}</td>
+                    <td>{{ share.currenttotalprice }}</td>
+                </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <h6 style="text-align:right">Current Your Cash: {{cash}}</h6>
+    <h6 style="text-align:right">Grand Total {{grand_total}}</h6>
+    {% else %}
+        <h4>Sorry You don't have any shares, to buy<a href="/buy"> click her</a></h4>
+    {% endif %}
+
+
+
+{% endblock %}
