@@ -28,7 +28,8 @@ Before running this project, ensure you have the following prerequisites install
 - requests 
 `pip install requests`
 flask-change-password
-
+- to run / to control flask `flask --app app.py run`
+- 
 ## Project Checklist
 - [x] It is available on GitHub.
 - [x] It uses the Flask web framework.

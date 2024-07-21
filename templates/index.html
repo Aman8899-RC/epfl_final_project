@@ -9,7 +9,7 @@
    
     <div style="text-align:left; margin-top:60px; ">
         <h3>Your Stocks</h3>
-        <hr style="dot 1px">
+        <hr style="border-width: 1px;">
     </div>
     {% if share_info %}
 
@@ -37,8 +37,8 @@
 
         </tbody>
     </table>
-    <h6 style="text-align:right">Current Your Cash: {{cash}}</h6>
-    <h6 style="text-align:right">Grand Total {{grand_total}}</h6>
+    <h6 style="text-align:right;">Current Your Cash: {{cash}}</h6>
+    <h6 style="text-align:right;">Grand Total {{grand_total}}</h6>
     {% else %}
         <h4>Sorry You don't have any shares, to buy<a href="/buy"> click her</a></h4>
     {% endif %}
