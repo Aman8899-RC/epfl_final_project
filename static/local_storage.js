@@ -23,6 +23,6 @@ if (logout) {
   logout.addEventListener('click', () => {
     // Remove item named "name" from local storage (corrected to removeItem)
     localStorage.removeItem('name');
-    console.log('Data removed from local storage');  // Optional: Log a message for debugging
+    // console.log('Data removed from local storage');  // Optional: Log a message for debugging
   });
 }

@@ -6,14 +6,17 @@
 
 
 {% block main %}
-    <form action="/buy" method="post">
-        <div class="m-3">
-            <input class="form-control mx-auto w-auto" autofocus name="symbol" type="text" placeholder="Symbol">
-        </div>
-        <div class="m-3">
-            <input class="form-control mx-auto w-auto" name="shares" type="number" min=1 autocomplete="off" placeholder="Shares">
-        </div>
-        <button type="submit">Buy</button>
-    </form>
+<form class="m-3" action="/buy" method="post">
+    <select id="Select_Symbol" class="form-select" name="symbol" required>
+        <option selected disabled value="" hidden>Please Select Symbol</option>
+        <option value="GOOG">GOOG</option>
+        <option value="AMZN">AMZN</option>
+        <option value="GLD">GLD</option>
+        <option value="AU">AU</option>
+    </select>
+    
+    <input class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min="1" autocomplete="off" style="margin-bottom:10px;">
+    <button type="submit" class="btn btn-primary" style="margin-bottom:10px;">Buy</button>
+</form>
 
 {% endblock %}

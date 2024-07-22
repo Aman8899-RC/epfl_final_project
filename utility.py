@@ -4,6 +4,7 @@ import pytz
 import requests
 import urllib
 import uuid
+import datetime
 
 from flask import redirect, render_template, request, session
 from functools import wraps
@@ -107,3 +108,7 @@ class Register:
         hashed_password = generate_password_hash(password)
         insert_user = self.db.execute("INSERT INTO users (username, hash) VALUES (?,?)", username, hashed_password)
         return insert_user is not None
+def time():
+    time = datetime.datetime.now()
+    time_now = time.strftime("%Y-%m-%d %H:%M:%S")
+    return time_now
