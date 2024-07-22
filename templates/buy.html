@@ -7,7 +7,8 @@
 
 {% block main %}
 <form class="m-3" action="/buy" method="post">
-    <select id="Select_Symbol" class="form-select" name="symbol" required>
+    <label for="Select_Symbol" class="form-label h3 p-1">Symbol</label>
+    <select id="Select_Symbol" class="form-select mx-auto w-25 mb-2" name="symbol" required>
         <option selected disabled value="" hidden>Please Select Symbol</option>
         <option value="GOOG">GOOG</option>
         <option value="AMZN">AMZN</option>
@@ -15,7 +16,7 @@
         <option value="AU">AU</option>
     </select>
     
-    <input class="form-control mx-auto w-auto" name="shares" placeholder="Shares" type="number" min="1" autocomplete="off" style="margin-bottom:10px;">
+    <input class="form-control mx-auto mx-auto w-25" name="shares" placeholder="Shares" type="number" min="1" autocomplete="off" style="margin-bottom:10px;">
     <button type="submit" class="btn btn-primary" style="margin-bottom:10px;">Buy</button>
 </form>
 
